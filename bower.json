@@ -1,0 +1,22 @@
+{
+  "name": "refritec",
+  "version": "0.0.0",
+  "authors": [
+    "jaime@mintitmedia.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.13",
+    "angular-ui-select": "~0.12.0",
+    "angular-bootstrap": "~0.7.0",
+    "bootstrap-css-only": "~3.0.2",
+    "angular": "~1.3.16"
+  }
+}

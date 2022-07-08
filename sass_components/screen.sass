@@ -1,0 +1,300 @@
+@import "_base"
+@import "_mixins"
+
+/* **************** GENERAL ************************ */
+html, body
+	background: white
+	color: $black
+	@extend %f_regular
+	font-size: 13px
+	letter-spacing: 0.03em
+	margin: 0
+	padding: 0
+	
+body
+	height: 100%
+	padding: 85px 0 0
+
+.nav, .pagination, .carousel, .panel-title a 
+	cursor: pointer
+
+a
+	text-decoration: none
+	
+	&:hover, &:active, &:focus
+		text-decoration: none
+	
+h1, h2, h3, h4, .main_title, .subtitle
+	@extend %oxygen_bold
+	font-weight: normal
+
+h2, h3
+	color: $blue
+	font-size: 30px
+
+h2.small, h3.small
+	color: $gray
+	@extend %f_bold
+	font-size: 10px
+	letter-spacing: .07em
+	margin: 0 0 30px
+	text-transform: uppercase
+
+.image_header
+	padding: 5px 0 5px 60px
+	
+	.icon
+		left: 0
+		position: absolute
+		top: 0
+	
+.image_header.has_link
+	padding: 0
+	
+	a
+		display: block
+		padding: 5px 0 5px 60px
+
+.image
+	display: block
+	
+.button
+	background: transparent
+	border: 3px solid $blue
+	@include border-radius(50px)
+	color: $black
+	display: inline-block
+	@extend %f_regular
+	font-size: 15px
+	line-height: 1.1em
+	padding: 9px 50px 9px 18px
+	position: relative
+	@include transition(.4s)
+
+	&:after
+		content: ""
+		background: sprite($general-icons, plus)
+		display: inline-block
+		@include sprite-dimensions($general-icons, plus)
+		position: absolute
+		right: 20px
+		top: 11px
+	
+	&:hover, &:active
+		background: $blue
+		color: white
+
+		&:after
+			background: sprite($general-icons, white-plus)
+
+.button.light
+	color: white
+
+	&:after
+		background: sprite($general-icons, white-plus)
+	
+	&:hover, &:active
+		background: $blue
+
+			
+.italic
+	font-style: italic
+	
+a.link-button, p.link-button
+	display: inline-block
+	@extend %f_bold
+	font-size: 15px
+	line-height: 1em
+	margin: 0 0 10px
+	min-height: 30px
+	padding: 9px 40px 8px 0
+	
+	.icon
+		position: absolute
+		right: 0
+		top: 0
+
+a.link-button.left, p.link-button.left
+	display: inline-block
+	margin-left: 0
+	margin-right: auto	
+	
+.grl-img-content, .text-img-content
+	a.link-button.left, p.link-button.left	
+		display: inline-block !important
+		
+.medium-title
+	font-size: 24px
+	
+.large-title
+	font-size: 40px
+	
+.bullet_list
+	list-style-type: none
+	margin: 25px 0 45px
+	padding: 0
+
+	li:before	
+		background: black
+		@include border-radius(10px)
+		content: ""
+		display: inline-block
+		height: 11px
+		margin: 0 17px 0 0
+		width: 11px
+
+.bullet_list.indentation	
+	margin: 25px 0 45px 20px	
+	
+/* **************** LAYOUT ************************ */
+.three_column_content
+	.container
+		overflow: hidden
+
+header, #main_content
+	overflow: hidden
+	width: 100%
+
+.small_container
+	margin: 0 auto
+	max-width: 90%
+	width: 665px
+
+.blue
+	background-color: $blue
+
+	h2, h3
+		color: white
+
+	.button
+		border-color: white
+		color: white
+
+		&:hover, &:active
+			background: white
+			color: $black
+
+			&:after
+				background: sprite($general-icons, plus)
+
+.gray
+	background: $gray
+	color: white
+	padding: 90px 0
+
+	h2, h3
+		color: white
+
+	a
+		color: white
+
+		&:hover, &:focus, &:active
+			color: darken(white, 5)
+
+
+.light-gray
+	background: #f7f7f7	
+
+
+/* **************** HEADER ************************ */
+
+@import "template/_header"
+
+
+#header
+	background: rgba(255,255,255,.9)
+
+	#brand
+		background: sprite($general-icons, logo)
+		@include sprite-dimensions($general-icons, logo)
+		opacity: 1
+		@include transition(.4s)
+
+		&:hover, &:focus, &:active
+			opacity: .7
+
+	a
+		background: transparent
+		color: $light-gray
+		@extend %oxygen
+		font-size: 11px
+		text-transform: uppercase
+
+		&:hover, &:focus, &:active
+			color: $black
+
+	.navbar
+		min-height: 85px
+
+#main_menu
+	margin: 27px 60px 0 0
+
+#header
+	.social	
+		right: 15px
+
+		.icon
+			background: #39addf
+			@include border-radius(50px)
+			overflow: hidden
+			text-align: center
+
+			&:after
+				background: sprite($general-icons, facebook)
+				content: " "
+				display: inline-block
+				@include sprite-dimensions($general-icons, facebook)
+				left: 50%
+				line-height: 1em
+				margin: 0 0 0 -2px
+				position: absolute
+				top: 6px
+				vertical-align: top
+				z-index: 10
+
+			&:hover, &:focus, &:active
+				background: darken(#39addf, 10)
+				opacity: 1
+
+
+
+/* **************** FOOTER ************************ */
+
+@import "template/_general"
+
+#footer, footer
+	background: $gray
+	color: white
+	@extend %oxygen
+	font-size: 9px
+	letter-spacing: .07em
+	padding: 20px 0 18px
+
+	a
+		color: white
+		text-transform: uppercase
+
+		&:hover, &:focus, &:active
+			color: #f64749
+
+	p
+		padding-top: 12px
+
+#footer-icon
+	background: sprite($general-icons, logo-icon)
+	display: block
+	@include sprite-dimensions($general-icons, logo-icon)
+	margin: 0 0 0 auto
+
+
+/* **************** SECTIONS ************************ */
+
+@import "section/_home"
+@import "section/_solutions"
+@import "section/_products"
+@import "section/_about_us"
+@import "section/_contact"
+
+/* **************** RESPONSIVE ************************ */
+@import "template/_responsive"
+@import "_responsive"

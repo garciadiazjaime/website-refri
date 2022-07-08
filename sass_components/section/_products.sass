@@ -1,0 +1,81 @@
+#productos
+	padding: 35px 0 0
+	p
+		max-width: 420px
+
+#catalogo
+	margin: 65px 0 100px
+
+	.img
+		display: block
+		min-height: 120px
+		width: 100%
+
+		img
+			display: inline-block
+
+	h3
+		font-size: 20px
+
+	p
+		font-size: 11px
+		margin: 0 auto 15px
+		max-width: 150px
+
+#big-supplier-phrase
+	color: $blue
+	@extend %oxygen_light
+	font-size: 37px
+	line-height: 1.18em
+	margin: 0 0 15px
+	max-width: 350px
+
+#proveedores
+	p
+		margin: 9px 0 15px auto
+		max-width: 350px
+
+	#big-supplier-phrase
+		margin: 0 0 15px
+		max-width: 350px
+
+#supplier-list
+	list-style-type: none
+	margin: 80px 0 40px
+	padding: 0
+
+	li
+		display: inline-block
+		height: 91px
+		line-height: 5000em
+		overflow: hidden
+		position: relative
+		vertical-align: top
+		width: 20%
+
+		&:after
+			content: " "	
+			background: sprite($suppliers-icons, mirage)
+			display: block
+			@include sprite-dimensions($suppliers-icons, mirage)
+			left: 50%
+			margin: 0 0 0 -75px
+			position: absolute
+			top: 0
+
+	#supplier-carrier
+		&:after
+			background: sprite($suppliers-icons, carrier)
+			@include sprite-dimensions($suppliers-icons, carrier)
+	#supplier-kramer
+		&:after
+			background: sprite($suppliers-icons, kramer)
+			@include sprite-dimensions($suppliers-icons, kramer)
+	#supplier-sporlan
+		&:after
+			background: sprite($suppliers-icons, sporlan)
+			@include sprite-dimensions($suppliers-icons, sporlan)
+	#supplier-thermal
+		&:after
+			background: sprite($suppliers-icons, thermalcare)
+			@include sprite-dimensions($suppliers-icons, thermalcare)

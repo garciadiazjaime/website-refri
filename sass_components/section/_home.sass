@@ -1,0 +1,125 @@
+/* **************** HOME ************************ */
+#home_banner
+	background: #8f8179
+	.item
+		background: url(#{$img}slider/residential-xs.jpg) center top no-repeat
+		background-size: cover
+		border: none
+		height: 350px
+
+		.decor
+			display: block
+			background: url(#{$img}banner-icon.png) 0 0 no-repeat
+			bottom: 0
+			display: block
+			height: 261px
+			left: 50%
+			margin: 0 0 0 28px
+			position: absolute
+			width: 265px
+
+		.wrapp
+			position: relative
+			width: 90%
+			
+			div
+				padding-bottom: 180px
+
+	#slide-commercial
+		background-image: url(#{$img}slider/commercial-xs.jpg)
+
+	#slide-industrial
+		background-image: url(#{$img}slider/industrial-xs.jpg)
+
+	h1, h2, .main_title
+		color: white
+		font-size: 70px
+
+	p
+		color: white
+		max-width: 255px
+	
+	.layout-left
+		.wrapp
+			div
+				width: 620px
+
+	h1
+		color: white
+		@extend %f_bold
+		font-size: 12px
+		left: 15px
+		position: absolute
+		text-transform: uppercase
+		top: 40px
+
+	.container
+		position: relative
+		z-index: 10
+
+	.carousel-control
+		font-size: 65px
+		padding: 270px 0 0
+
+	.carousel-indicators
+		height: 90px
+		right: 15px
+		text-align: right
+		top: 40px
+		width: 110px
+
+		li, li.active
+			background: transparent
+			border: none
+			color: white
+			display: block
+			@extend %f_bold
+			font-size: 9px
+			height: 15px
+			letter-spacing: 0.07em
+			margin: 0 0 5px
+			padding: 0 17px 0 0
+			position: relative
+			text-transform: uppercase
+			width: auto
+			&:after
+				border: 2px solid $blue
+				@include border-radius(50px)
+				height: 12px
+				content: " "
+				position: absolute
+				right: 0
+				top: 1px
+				width: 12px
+
+		li
+			&:hover, &:focus, &:active
+				&:after
+					background: $blue
+
+		li.active
+			&:after
+				background: $blue
+
+#productos-servicios
+	padding: 90px 0 50px
+
+	h3
+		margin-bottom: 35px
+		a
+			color: white
+
+			&:hover, &:focus, &:active
+				color: darken(white, 5)
+
+	p
+		min-height: 70px
+
+	.button 
+		margin: 35px 0 10px		
+
+
+.glyphicon-chevron-left:before
+	content: "\2770"	
+.glyphicon-chevron-right:before
+	content: "\2771"			

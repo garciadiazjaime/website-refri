@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html data-ng-app="mint.app" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    
+    <title>Refri-Tec de Tijuana</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="http://mintitmedia.com">
+    <meta name="description" content="Refri-Tec de Tijuana. Aire acondicionado y refrigeracion.">
+    <link rel="shortcut icon" type="image/png" href="/static/img/favicon.ico">
+    <link href="/static/css/vendor.css" rel="stylesheet">
+    <link href="/static/css/screen.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- uiView: header-view --><header id="header" data-ui-view="header-view" class="ng-scope"><div class="navbar ng-scope">
+    <div id="main_nav" class="navbar-inner">
+        <div class="container">
+            <a id="brand" class="icon" href="/" data-ui-sref="app.home" title="Regresar a inicio">Logo</a>
+            <div class="navbar-header">
+                <button type="button" id="responsive_btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Navegación de interruptor</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon close"></span>
+                </button>
+            </div>
+            <!-- / .nav-header -->
+            <div class="collapse navbar-collapse navHeaderCollapse hidden-xs">
+                <ul id="main_menu" class="nav navbar-nav navbar-right">
+                    <li class="soluciones">
+                        <a href="/soluciones" title="soluciones" data-ui-sref="app.solutions" data-ui-sref-active="active" class="">
+                        	Soluciones
+                        </a>
+                    </li>
+                    <li class="productos">
+                        <a href="/productos" title="productos" data-ui-sref="app.products" data-ui-sref-active="active" class="">
+                        	Productos
+                        </a>
+                    </li>
+                    <li class="distribucion" data-ui-sref="app.distibution" data-ui-sref-active="active" href="/distribucion">
+                        <a href="" title="distribucion">
+                        	Distribucion
+                        </a>
+                    </li>
+                    <li class="nosotros">
+                        <a href="/nosotros" title="nosotros" data-ui-sref="app.aboutus" data-ui-sref-active="active" class="">
+                        	Nosotros
+                        </a>
+                    </li>
+                    <li class="contacto">
+                        <a href="/contacto" title="contacto" data-ui-sref="app.contact" data-ui-sref-active="active" class="">
+                        	Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- / .navHeaderCollapse -->
+        </div>
+        <!-- / .container -->
+    </div>
+    <!-- / #main_nav -->
+</div>
+<!-- / .navbar -->
+</header>
+    <!-- uiView: main-view --><section id="content" role="main" class="view-frame ngFade ng-scope" data-ui-view="main-view"><!-- uiView: content-view --><div data-ui-view="content-view" class="ng-scope"><!-- ************ BANNER PRINCIPAL INICIO 3 Versiones ********** -->
+<div id="home_banner" class="ng-scope">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" interval="5000">
+    <ol class="carousel-indicators" ng-show="slides().length > 1">
+        <!-- ngRepeat: slide in slides() --><li ng-repeat="slide in slides()" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides() --><li ng-repeat="slide in slides()" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides() --><li ng-repeat="slide in slides()" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides() -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+        <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item layout-left item ng-isolate-scope" ng-transclude="" id="slide-residential">
+            <div class="wrapp ng-scope">
+                <div>
+                    <h3 class="main_title">Expertos <br> en control de clima</h3>
+                    <p>Ofrecemos soluciones en refrigeración y calefacción para su hogar.</p>
+                    <a href="/contacto" title="Contáctanos" class="button light" data-ui-sref="app.contact">Contáctanos</a>
+                </div>
+                <span class="decor"></span>
+            </div><span class="height_control ng-scope"></span>
+        </div>
+        <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item layout-left item ng-isolate-scope" ng-transclude="" id="slide-commercial">
+            <div class="wrapp ng-scope">
+                <div>
+                    <h3 class="main_title">Servicio <br> cálido y profesional </h3>
+                    <p>Contamos con servicio de instalación y mantenimiento de equipos de refigeración para comercios y negocios. </p>
+                    <a href="/contacto" title="Contáctanos" class="button light" data-ui-sref="app.contact">Contáctanos</a>
+                </div>
+                <span class="decor"></span>
+            </div><span class="height_control ng-scope"></span>
+        </div>
+        <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item layout-left item ng-isolate-scope active" ng-transclude="" id="slide-industrial">
+            <div class="wrapp ng-scope">
+                <div>
+                    <h3 class="main_title">Soluciones <br>para la industria</h3>
+                    <p>Ofrecemos soluciones de refrigeración especializadas para la industria.</p>
+                    <a href="/contacto" title="Contáctanos" class="button light" data-ui-sref="app.contact">Contáctanos </a>
+                </div>
+                <span class="decor"></span>
+            </div><span class="height_control ng-scope"></span>
+        </div>
+    </div>
+    <a ng-click="prev()" class="carousel-control left" ng-show="slides().length > 1">‹</a>
+    <a ng-click="next()" class="carousel-control right" ng-show="slides().length > 1">›</a>
+</div>
+</div>
+<!-- #home_banner /.carousel -->
+<!-- ************ BANNER PRINCIPAL INICIO 3 Versiones - Fin ***** -->
+<!-- ************ CONTENIDO CON TRES COLUMNAS  ***** -->
+
+<section id="productos-servicios" class="blue ng-scope" autoscroll="true">
+    <div class="container three_column_content">
+        <h2 class="hidden">Productos y servicios</h2>
+        <div class="row ">
+            <div class="col-xs-12 col-sm-4 first text-center">
+                <div class="wrapp">
+                    <h3><a href="/soluciones/instalacion" title="Instalación" data-ui-sref="app.solutions.installation">Instalación
+									</a>
+								</h3>
+                    <p>Aire acondicionado, ductos, refrigeraciones, unidades condensadoras y evaporadores así como cámaras de conservación. </p>
+                    <a href="/soluciones/instalacion" title="Ver más" class="button" data-ui-sref="app.solutions.installation">Ver más </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 text-center">
+                <div class="wrapp">
+                    <h3><a href="/soluciones/mantenimiento" title="Mantenimiento" data-ui-sref="app.solutions.maintenance">
+									Mantenimiento
+									</a>
+								</h3>
+                    <p>Para evitar el mal funcionamiento en los sistemas de refrigeración es recomendable realizar revisiones periódicas a partir de su instalación</p>
+                    <a href="/soluciones/mantenimiento" title="Ver más" class="button" data-ui-sref="app.solutions.maintenance">Ver más</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 text-center last">
+                <div class="wrapp">
+                    <h3><a href="/productos" title="Productos" data-ui-sref="app.products">
+									Productos
+									</a>
+								</h3>
+                    <p>En Refritec contamos con una amplia gama de productos innovadores, confiables y garantizados.</p>
+                    <a href="/productos" title="Ver más" class="button" data-ui-sref="app.products">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ************ CONTENIDO CON IMAGENES EN TRES COLUMNAS  - Fin **** -->
+
+<!-- ************ FRASE PRIORIDAD **** -->
+			<section id="priority-phrase" class="ng-scope">
+				<div class="wrap">
+					<p>Nuestra prioridad es resolver su  necesidad de refrigeración de forma <em>práctica, efectiva y con nuestra garantía </em> de servicio y funcionalidad</p>
+				</div><span class="height_control"></span>	
+			</section>
+
+<!-- ************  FRASE PRIORIDAD  - Fin **** -->
+	
+<!-- ************ CONTENIDO 2 COLUMNAS ********** -->
+			<section id="soluciones" class="ng-scope">
+				<div id="instalacion" class="text-img-content right">
+					<div class="container">
+						<h2 class="small">Soluciones</h2>
+						<div class="row">
+							<div class="col-xs-12 col-sm-5 grl-text-content">	
+								<div class="wrapper">
+									<h3 class="big-title">Instalación</h3>
+									<p>A partir de las indicaciones de nuestros clientes, nuestros asesores  llevarán a cabo un plan para elegir la marca, modelo y funciones del equipo ideal para su inmueble. Instalamos equipos de aire acondicionado, ductos, refrigeraciones, unidades condensadoras y evaporadores así como cámaras de conservación.  </p>
+									<a href="/contacto" title="Contáctanos" class="button icon_holder" data-ui-sref="app.contact">Contáctanos</a>
+								</div>	
+							</div>
+							<div class="col-xs-12 col-sm-6 col-sm-offset-1">
+							
+							</div>
+						</div><!-- .row -->	
+					</div>	
+					<span id="solutions-instalation" class="img">
+						<div class="wrapp">
+							<div>
+								
+							</div>	
+						</div><span class="height_control"></span>	
+					</span>
+				</div><!-- .text-img-content.right -->	
+				<div id="mantenimiento" class="text-img-content">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-sm-offset-1 grl-img-content">
+							</div>
+							<div class="col-xs-12 col-sm-5 grl-text-content">	
+								<div class="wrapper">
+									<h3 class="big-title">Mantenimiento</h3>
+									<p>Para evitar  el mal funcionamiento en los sistemas de refrigeración es recomendable  realizar revisiones periódicas  a partir de su instalación, con las que garantizamos una mejor funcionalidad del equipo y se prolongará el tiempo de vida del mismo. </p>
+
+									<p>Ofrecemos el servicio de mantenimiento a instalaciones existentes, a partir de algún mal funcionamiento del aparato, detectamos las causas de la falla e implementamos un plan para darle  solución. </p>
+									<a href="/contacto" title="Contáctanos" class="button icon_holder" data-ui-sref="app.contact">Contáctanos</a>
+								</div>
+							</div>
+						</div><!-- .row -->
+					</div>
+					<span id="solutions-mantainance" class="img text-left grl-img">
+						<div class="wrapp">
+							<div>
+								
+							</div>
+						</div><span class="height_control"></span>
+					</span>
+				</div><!-- .text-img-content -->
+			</section>							
+			
+<!-- ************ CONTENIDO 2 COLUMNAS - Fin ***** -->	
+
+<!-- ************ CONTENIDO CON TRES COLUMNAS  ***** -->
+			<section id="tipo-clientes" class="gray ng-scope">
+				<div class="container three_column_content">
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 text-center first">
+							<div class="wrapp">
+								<h3 id="client-residential">
+									Residencial
+								</h3>
+								<p>Contamos con soluciones de Aire acondicionado y refirgeración para su hogar .</p>
+							</div>
+						</div>	
+						<div class="col-xs-12 col-sm-4 text-center ">
+							<div class="wrapp">
+								<h3 id="client-commercial">
+									Comercial
+								</h3>
+								<p>Podemos ayudarle con soluciones de refrigeración para su negocio u oficina. </p>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 text-center last">
+							<div class="wrapp">
+								<h3 id="client-industrial">
+									Industrial
+								</h3>
+								<p>Contamos con soluciones especializadas en refrigeración, cámaras de congelación y conservación para todo tipo de industria.</p>
+							</div>
+						</div>
+					</div>	
+				</div>
+			
+			</section>	
+			
+<!-- ************ CONTENIDO CON IMAGENES EN TRES COLUMNAS  - Fin **** -->
+
+<section id="productos" class="ng-scope">
+	<div class="container">
+		<h3 class="small">Distribución</h3>
+		<h2>Productos</h2>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<p>En Refritec contamos con una amplia gama de productos innovadores, confiables y garantizados que son piezas elementales para el buen funcionamiento de su sistema de refrigeración.</p>
+			</div>	
+			<div class="col-xs-12 col-sm-6 text-right">
+				<a href="/contacto" title="Contáctanos y solicita una cotización" class="button inline" data-ui-sref="app.contact">Solicita una cotización</a>
+			</div>	
+		</div>	
+		<div id="catalogo" class="text-center">
+			<div class="row">
+				<div class="col-xs-6 col-sm-3">
+					<span class="img"><img src="/static/img/products/minisplits.jpg" alt="MiniSplits"></span>
+					<h3>MiniSplits</h3>
+					<p>Equipos de Aire-Acondicionado MIRAGE-CARRIER</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<span class="img"><img src="/static/img/products/chillers.jpg" alt="Chillers"></span>
+					<h3>Chillers</h3>
+					<p>Enfriadores SCHREIBER ENGINEERING</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<span class="img"><img src="/static/img/products/refrigeracion.jpg" alt="Refrigeración"></span>
+					<h3>Refrigeración</h3>
+					<p>Equipos de Refrigeración KRAMER - KRACK</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<span class="img"><img src="/static/img/products/filtros.jpg" alt="Filtros Plisados"></span>
+					<h3>Filtros Plisados</h3>
+					<p>AEROSTAR</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-3">
+					<span class="img"><img src="/static/img/products/motores.jpg" alt="Motores Eléctricos"></span>
+					<h3>Motores Eléctricos</h3>
+					<p>FASCO</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<span class="img"><img src="/static/img/products/puertas.jpg" alt="Puertas de Congelación"></span>
+					<h3>Puertas de Congelación</h3>
+					<p>Puertas para camaras de congelación y/o conservación 
+R PLUS - IMPERIAL - PRO-LINE</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<span class="img"><img src="/static/img/products/valvulas.jpg" alt="Válvulas de expansión"></span>
+					<h3>Válvulas de expansión</h3>
+					<p>SPORLAN - ALCO</p>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<span class="img"><img src="/static/img/products/refacciones.jpg" alt="Refacciones"></span>
+					<h3>Refacciones</h3>
+					<p>Contamos con todo tipo de refacciones de las marcas MIRAGE- CARRIER Y THERMAL CARE</p>
+				</div>
+			</div>
+		</div>	
+		
+	</div>
+</section>
+<section id="proveedores" class="ng-scope">
+	<div class="container">
+		<h2 class="hidden">Nuestros proveedores</h2>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<p id="big-supplier-phrase">Distribuimos marcas que son sinónimo de garantía.</p>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<p>En Refritec de Tijuana nos enorgullecemos de trabajar con marcas de calidad las cuales son sinónimo de garantía y   durabilidad.  Algunas de las marcas que nos respaldan para la distribución e instalación de sus productos son:</p>
+			</div>	
+		</div>
+		<ul id="supplier-list">
+			<li id="supplier-mirage"> Mirage</li><li id="supplier-carrier">
+			Carrier</li><li id="supplier-kramer">
+			Kramer</li><li id="supplier-sporlan">
+			Sporlan</li><li id="supplier-thermal">
+			Thermal Care</li>
+		</ul>
+	</div>	
+</section>	
+<section id="nosotros" class="light-gray text-img-content right ng-scope">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<div class="wrap">
+					<h2 class="small">Nosotros</h2>
+					<h3>30 años de <br> experiencia</h3>
+					<p>Refritec es una compañía con más de 30 años de experiencia en el rubro de instalación, servicio y reparación de sistemas de refrigeración en Baja California; la cual nace dando mantenimiento  a pequeños locales comerciales  y –a partir de la calidad y excelencia en el servicio – se ha afianzado como uno de los proveedores tanto de partes como de servicio más importantes en la región, en los sectores industrial, comercial, hospitalario y residencial.  </p>
+				</div>	
+			</div>	
+			<div class="col-xs-12 col-sm-6">
+
+			</div>	
+		</div>	
+	</div>
+	<div id="aboutUsSlider">
+		<div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" interval="5000">
+    <ol class="carousel-indicators" ng-show="slides().length > 1">
+        <!-- ngRepeat: slide in slides() --><li ng-repeat="slide in slides()" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides() --><li ng-repeat="slide in slides()" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides() -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+	        <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item item ng-isolate-scope" ng-transclude="" id="aboutUsSlider-building">
+	        
+	        </div>
+	        <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item ng-isolate-scope active" ng-transclude="" id="aboutUsSlider-interior">
+	        
+	        </div>
+	    </div>
+    <a ng-click="prev()" class="carousel-control left" ng-show="slides().length > 1">‹</a>
+    <a ng-click="next()" class="carousel-control right" ng-show="slides().length > 1">›</a>
+</div> 
+	</div>
+	
+</section>	
+
+<!-- ************ TWO COLORS INFO  ***************** -->
+<div id="contacto" class="two_colors-column ng-scope">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 first">
+                <div class="wrapp">
+                    <h2 class="small">Contacto</h2>
+                    <p>En Refritec de Tijuana nuestra prioridad es dar el mejor servicio a nuestros clientes asesorándoles en sus necesidades de refrigeración, para una consulta personalizada, estamos disponibles en:</p>
+                    <ul class="contact-list">
+                        <li class="address">
+                            <address>Prolongación Paseo de los Heroes No. 755
+                                <br> Col. 20 de Noviembre Tijuana, B.C. México </address>
+                        </li>
+                        <li class="tel"><a href="tel:6646222223">(664) 622-2223</a><a href="tel:6646222243">(664) 622-2243 </a></li>
+                        <li class="email"><a href="mailto:info@refritectijuana.com">info@refritectijuana.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 form_area">
+                <div class="wrapp">
+                    <h3>Contáctanos</h3>
+						<p>Para cualquier duda o comentario por favor complete la siguiente forma de contacto y en breve estaremos en contacto con usted.</p>
+
+						<form id="contact-form" name="contact_form" novalidate="novalidate" class="ng-pristine ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength ng-valid-email ng-valid-pattern">
+							<input type="text" name="name" data-ng-model="contact.name" data-ng-required="validate.name.required" data-ng-minlength="3" data-ng-maxlength="120" maxlength="120" placeholder="Nombre" class="custom_textbox ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" required="required">
+
+							<input type="email" name="email" data-ng-model="contact.email" data-ng-required="validate.email.required" data-ng-minlength="3" data-ng-maxlength="120" data-ng-pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$" class="custom_textbox ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength" maxlength="120" placeholder="Correo" required="required">
+
+							<input type="tel" name="tel" data-ng-model="contact.tel" data-ng-required="" placeholder="Teléfono" class="custom_textbox ng-pristine ng-untouched ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required">
+
+							<textarea name="message" data-ng-model="contact.message" data-ng-required="validate.message.required" data-ng-minlength="5" data-ng-maxlength="500" placeholder="Mensaje" class="custom_textarea ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" maxlength="500" required="required"></textarea>
+
+							<button type="submit" class="custom_submit button" data-ng-click="sendEmail(contact_form, contact)" data-ng-disabled="messageState.state == 3">Enviar</button>
+
+							<div id="msg" data-ng-show="contact_form.$submitted || messageState.state == 2" class="ng-hide">
+						        <span data-ng-bind="messageState.msg" data-ng-class="{'error': messageState.state == 3, 'success': messageState.state == 2}" class="ng-binding"></span>
+								<img data-ng-src="/static/img/ajax-loader.gif" alt="loading" data-ng-show="messageState.state == 1" src="/static/img/ajax-loader.gif" class="ng-hide">
+						    </div>
+						</form>
+					</div>
+				</div>	
+			</div>	
+			<span class="color_decor"></span>
+		</div>
+	</div>
+<!-- ************ TWO COLORS INFO  - fin ********** -->
+<section id="map" class="ng-scope">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1682.230329284017!2d-116.9855997!3d32.5138416!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x20d9f71431f46aac!2sRefritec+Loubet+S.A.+de+C.V.!5e0!3m2!1sen!2smx!4v1434384222973" width="100%" height="100%" frameborder="0"></iframe>
+</section>
+</div></section>
+    <!-- uiView: footer-view --><footer data-ui-view="footer-view" class="ng-scope"><div class="container ng-scope">
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+			<p>Todos los derechos reservados Refri-Tec de Tijuana</p>
+		</div>	
+		<div class="col-xs-12 col-sm-4">
+			<p>Un proyecto de: <a href="http://somospool.com/" target="_blank" title="Visita POOL Branding">POOL</a>  Código por: <a href="http://mintitmedia.com/" target="_blank" title="Visita Mint IT Media - Desarrollo y diseño web">MINT</a></p>
+		</div>	
+		<div class="col-xs-12 col-sm-4">
+			<span id="footer-icon"></span>
+		</div>	
+	</div>	
+</div>	</footer>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/static/js/vendor.js"></script>
+    <script type="text/javascript" src="/static/js/mint.app.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-64118511-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+
+
+</body></html>

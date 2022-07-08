@@ -1,0 +1,23 @@
+=placeholder-style
+	color: #bbbbbb
+	@extend %myriad
+	font-size: 13px
+	line-height: 1.3em
+	
+=apply-placeholders
+	&::-webkit-input-placeholder
+		+placeholder-style
+	&:-moz-placeholder
+		+placeholder-style
+	&::-moz-placeholder
+		+placeholder-style
+	&.placeholder
+		+placeholder-style
+	&:-ms-input-placeholder
+		+placeholder-style
+
+.placeholders
+	+apply-placeholders
+ 
+input, textarea, #search-box
+	@extend .placeholders

@@ -1,0 +1,272 @@
+/* -------------- MAIN HOME BANNER ----------------- */
+#home_banner, .banner_seccion_interna
+	font-size: 13px
+	height: 100%
+	position: relative
+		
+	.carousel-indicators
+		left: auto
+		margin: 0
+		padding: 0
+		position: absolute
+		right: 20px
+		top: 20px
+		width: 15px
+		z-index: 10
+		
+		li
+			background: black
+			border: 2px solid black
+			
+		li.active
+			background: transparent
+			border: 2px solid black
+	
+	.carousel-inner
+		height: 100%
+	
+	.item
+		border: 9px solid black
+		height: 100%
+		text-align: center
+	
+	.wrapp
+		display: inline-block
+		margin: 0 -1px 0 0
+		padding: 20px 0
+		vertical-align: middle
+		width: 98%
+		
+	.carousel-control
+		background: transparent
+		
+	h1, h2, h3
+		margin-top: 0
+		
+	h1, .main_title, h2, .sub_title
+		@extend %f_bold
+		font-size: 120px
+		line-height: 1em
+		
+	h2, .sub_title
+		font-size: 70px
+		
+	p
+		margin: 0 auto 20px
+		max-width: 490px
+		
+	.layout-left, .layout-right
+		.wrapp
+			text-align: left
+			
+			.icon
+				margin: 0 auto 18px 0
+			
+			div
+				margin: 0 auto
+				max-width: 100%
+				width: 514px
+				
+		p
+			margin: 0 auto 20px 0
+				
+	.layout-right
+		.wrapp
+			max-width: 98%
+			width: 1028px
+			
+			div
+				margin: 0 0 0 auto
+				max-width: 100%
+				width: 50%
+
+.height_control
+	display: inline-block
+	height: 100%
+	vertical-align: middle
+	width: 1px
+
+/* -------------- INNER SECTION CONTENT ----------------- */
+.text-img-content
+	.img
+		font-size: 13px
+		padding: 10px 15px
+		text-align: center
+		
+		.medium-header-graph
+			margin: 0 auto 10px
+			position: static
+		
+		h4, .main_title
+			@extend %f_bold
+			font-size: 30px
+			
+			.italic
+				font-style: italic
+				
+		div
+			position: relative
+			
+	.wrapp
+		display: inline-block
+		margin: 0 -1px 0 0
+		vertical-align: middle
+		width: 100%
+		
+		div
+			margin: 0 auto
+			width: 350px
+				
+	.img.text-left
+		margin-bottom: 15px
+		text-align: left
+
+		.medium-header-graph
+			margin: 0 0 10px
+		
+.banner_content
+	background: url(#{$img}placeholder-img-grl.jpg) center top no-repeat
+	background-size: cover
+	font-size: 13px
+	height: 290px
+	margin: 0 auto 40px
+	max-width: 100%
+	text-align: center
+	width: 665px
+	
+	.wrapp
+		display: inline-block
+		margin: 0 -1px 0 0
+		vertical-align: middle
+		width: 100%
+	
+	div
+		margin: 0 auto
+		max-width: 100%
+		width: 550px
+	
+	p
+		margin: 0 auto
+		max-width: 335px
+		
+	h4, .main_title
+		font-size: 60px
+	
+#banner_content
+	background-image: url(#{$img}placeholder-img-grl.jpg)
+	background-size: 100% 100% //borrar si no se quiere deformar imagen
+	
+.centered_small_content
+	margin-bottom: 60px
+	text-align: center
+
+	h2, h3, h4
+		font-size: 24px
+		margin: 0 0 20px
+
+.side_image_content
+	h2, h3, h4, .main_title
+		margin-top: 0
+		
+	.img
+		display: block
+		
+#side_image_content-img
+	background: url(#{$img}placeholder-img-grl.jpg) center top no-repeat
+	background-size: 100% 100%
+	height: 195px
+	margin: 0 0 15px
+	max-width: 100% 
+	width: 273px
+	
+.three_column_content	
+	margin: 0 auto 90px
+
+	.icon
+		margin: 39px 0 10px
+		position: static
+	
+	.text-center
+		.icon
+			margin: 39px auto 10px
+			
+	.img
+		background: url(#{$img}placeholder-img-grl.jpg) center top no-repeat
+		display: block
+		margin: 0 0 10px
+		
+	a.link-button, p.link-button
+		.icon
+			margin: 0
+			
+	.wrapp
+		margin: 0 auto 15px
+		max-width: 100%
+		width: 270px
+		
+	.first	
+		.wrapp
+			margin: 0 0 15px
+		
+	.last	
+		.wrapp
+			margin: 0 0 15px auto
+			
+	h2, .main_title
+		font-size: 36px
+		margin-bottom: 22px
+			
+	h3, .subtitle
+		line-height: 1em
+		margin: 0 0 10px
+		
+			
+#three_column_content-img
+	background-size: 100% 100%
+	height: 113px 
+	width: 100%
+	
+.content_switch-holder
+	display: block
+	height: 0
+	margin-bottom: 0
+	overflow: hidden
+	@include transition(.4s)
+	width: 100%
+	
+.content_switch-holder.open
+	margin-bottom: 40px
+		
+
+	
+.two_colors-column	
+	position: relative
+	
+	.big
+		@extend %f_bold
+		font-size: 14px
+		margin: -10px 0 10px
+	
+	.row
+		height: 435px
+		padding-bottom: 15px
+		padding-top: 55px
+		position: relative
+		z-index: 5
+		
+	.col-xs-12
+		min-height: 100%
+		
+	.color_decor
+		background: #F7F7F7
+		display: block
+		height: 100%
+		position: absolute
+		right: 0
+		top: 0
+		width: 50%
+		
+	.wrapp
+		margin: 0 auto
+		max-width: 360px
+		width: 95%

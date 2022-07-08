@@ -1,0 +1,139 @@
+header
+	background: $gray
+	position: fixed
+	top: 0
+	z-index: 100
+	
+	a
+		color: black
+	
+	.navbar
+		margin: 0
+		min-height: 68px
+		
+	.navbar-nav > li > a
+		background: transparent
+		font-size: 12px
+		padding: 0 0 15px
+		
+		&:hover, &:active
+			background: transparent
+			color: blue
+			
+	.navbar-nav > li
+		margin: 0 0 0 55px
+		
+	.navbar-nav > li.first
+		margin-left: 0
+	
+	.social
+		position: absolute
+		right: 125px
+		top: 25px
+		
+	.nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+		background: transparent
+
+header
+	overflow: visible
+		
+#main_nav
+	.container
+		position: relative
+		
+#brand
+	background-position: 0 0
+	height: 27px
+	left: 15px
+	line-height: 5000em
+	overflow: hidden
+	position: absolute
+	top: 18px
+	width: 157px
+
+#lang
+	position: absolute
+	right: 5px
+	text-transform: uppercase
+	top: 30px
+	width: 70px
+	
+	a
+		color: black
+		
+		&:hover, &:active
+			color: blue
+	
+#main_menu
+	margin: 27px 240px 0 0
+
+#responsive_btn
+	&:hover, &:active
+		.icon-bar	
+			background: lighten(black, 30)
+			
+	.icon-bar	
+		background: black
+		@include border-radius(5px)
+		height: 3px
+		width: 26px
+	
+.navbar-toggle
+	margin-top: 10px
+		
+.social
+	display: inline-block
+	list-style-type: none
+	margin: 0
+	padding: 0
+	
+	li
+		display: inline-block
+		margin: 0 0 0 5px
+		vertical-align: top
+		
+	li.first, li:first-child
+		margin: 0	
+		
+	a
+		display: block
+		height: 22px
+		line-height: 5000em
+		opacity: 1
+		overflow: hidden
+		@include transition(opacity, .4)
+		width: 24px
+		
+		&:hover, &:active
+			opacity: .7
+		
+	.facebook
+		a
+			background-position: 0 -260px
+
+	.youtube
+		a
+			background-position: -32px -260px
+
+	.other
+		a
+			background-position: -94px -260px
+			
+			
+header.condensed
+	min-height: 46px
+	.navbar
+		min-height: 40px
+		
+	#brand
+		top: 5px
+		width: 49px
+		
+	#main_menu
+		margin: 8px 85px 0 0
+		
+	.social
+		display: none
+		
+	#lang
+		display: none	

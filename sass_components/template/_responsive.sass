@@ -1,0 +1,400 @@
+/* ****************** RESPONSIVE ************** */	
+
+@media screen and (max-width: 991px)
+	.container
+		padding: 0
+		width: 95%
+		
+@media screen and (min-width: 768px)
+	.no-left-padding-sm
+		padding-left: 0
+
+	.no-right-padding-sm
+		padding-right: 0		
+			
+/* ***** HEADER ****** */
+@media screen and (max-width: 991px)
+	header
+		.navbar-nav > li
+			margin: 0 0 0 30px
+		
+		.social
+			right: 95px
+		
+	#main_menu
+		margin: 30px 200px 0 0
+		
+	header.condensed
+		.navbar-toggle
+			margin: 0 15px 0 0
+		
+@media screen and (max-width: 869px)
+	header
+		.navbar-nav > li
+			margin: 0 0 0 13px
+			
+@media screen and (max-width: 767px)			
+	header
+		.social
+			display: none
+			
+		.navbar-nav > li	
+			margin: 0
+			
+		.navbar-nav > li.first > a
+			border: none
+			
+		.navbar-nav > li > a
+			border-top: 1px solid black
+			font-size: 15px
+			padding: 13px 0
+			
+	#lang
+		display: none
+		
+	#main_menu
+		margin: 0
+		padding: 10px 0 0
+		width: 100%
+		
+/* ***** HOME ****** */	
+
+@media screen and (max-width: 500px)
+	#home_banner
+		.carousel-control
+			padding: 125px 0 0
+
+@media screen and (max-width: 1023px)	
+	#home_banner
+		.layout-right
+			.wrapp
+				div
+					width: 60%
+					
+@media screen and (max-width: 767px)
+	#home_banner
+		.layout-left, .layout-right
+			.icon	
+				margin: 0 auto 10px 0
+		
+		.layout-left, .layout-right
+			.wrapp
+				.icon
+					margin: 0 auto 10px 0
+			
+		.layout-right
+			.wrapp
+				width: 98%
+				
+				div
+					margin: 0 auto
+					max-width: 100%
+					width: 514px
+				
+		h1, .main_title
+			font-size: 50px
+			margin-bottom: 0
+			
+		h2, .sub_title
+			font-size: 35px
+			margin-bottom: 5px
+			
+	.graph-cell
+		.graph
+			background-position: center
+			
+	.posts_grid, .posts_grid > .col-xs-12, .posts_grid .grid
+		height: auto
+		
+	.slider_brandline	, .slider_seccion-titulo
+		.two-column-title
+			.link-button
+				margin: 25px auto 0
+	
+	.slider_seccion-titulo
+		.two-column-title	
+			h4, .main_title
+				font-size: 50px
+			
+		.item
+			height: 250px
+			
+	//valores temporales
+	
+	.grl-img-content, .grl-img-content.right
+		.row
+			padding-bottom: 320px
+	
+	
+	//TERMINA valores temporales	
+			
+	.grl-img-content, .grl-img-content.right, .text-img-content, .text-img-content.right
+		.img
+			bottom: 0
+			left: 0
+			top: auto
+			width: 100%
+			
+	.grl-img-content.large_text
+		.img
+			width: 100%
+			
+@media screen and (max-width: 445px)
+	.nav-arrow-left
+		left: 25px
+		
+	.nav-arrow-right
+		right: 25px
+		
+	.slider_brandline-fixed
+		h4, .main_title	
+			font-size: 45px
+			
+@media screen and (min-width: 768px) and (max-width: 805px)
+	.grid, .project_grid
+		.col-xs-12, a
+			height: 320px
+	
+	.columns_3
+		.col-xs-12, a
+			height: 365px
+	
+	.posts_grid
+		.col-xs-12, a
+			height: 500px
+			
+/* ***** ABOUT US ****** */
+@media screen and (max-width: 767px)
+	#aboutUsSlider
+		.carousel-control
+			padding: 65px 0 0
+
+	.banner_seccion_interna
+		.layout-center, .layout-left
+			h1, .main_title
+				font-size: 43px
+				
+		.layout-center
+			h2, .sub_title
+				font-size: 32px
+		
+		.layout-left
+			h2, .sub_title
+				font-size: 22px
+				
+	.three_column_content
+		.wrapp
+			margin: 0 0 45px
+			text-align: left
+			width: 270px
+			
+		.icon
+			margin: 0 0 10px
+			
+		.first, .last
+			.wrapp			
+				margin: 0 0 45px
+			
+		.text-center
+			.icon
+				margin: 0 0 10px
+				
+	.text-img-content, .text-img-content.right
+		.row
+			min-height: 1px
+			
+		.img
+			margin-bottom: 20px
+			margin-top: 20px
+			position: static
+	
+	.clients
+		.client-banner-slider	
+			margin: 40px 0 70px
+			position: relative
+			width: 100%		
+			
+	.client_slider
+		.wrapp
+			max-width: 100%
+				
+		.item
+			ul
+				margin: 0
+
+			li			
+				margin: 0 0 0 1%
+				overflow: hidden
+				width: 24%
+
+			ul > li:first-child, li.first
+				margin-left: 0		
+	
+		.carousel-indicators
+			li
+				min-width: 1px
+				max-width: 33%
+				padding-left: 10px
+				padding-right: 10px
+				
+@media screen and (max-width: 500px)
+
+	.banner_seccion_interna		
+		.layout-left	
+			.wrapp
+				div
+					padding: 100px 0 0
+	
+	.client_slider
+		.item
+			height: 435px
+			
+			li, ul > li:first-child, li.first			
+				margin: 0 0 0 1%
+				width: 48%				
+
+@media screen and (max-width: 420px)
+	.prof-side_content, .post-side_content
+		.wrapp
+			div
+				padding: 0 0 0 135px
+				width: 320px
+				
+@media screen and (max-width: 349px)				
+	.prof-side_content, .post-side_content
+		.wrapp
+			div			
+				padding: 135px 0 0
+				max-width: 95%
+				width: 190px
+			
+		.profile_xl
+			left: 50%
+			margin: 0 0 0 -58px		
+					
+@media screen and (min-width: 768px) and (max-width: 950px)	
+			
+	.client_slider
+		.item
+			ul
+				margin: 0
+				
+			li			
+				margin: 0 0 0 1%
+				overflow: hidden
+				width: 24%
+				
+			ul > li:first-child, li.first
+				margin-left: 0
+				
+@media screen and (min-width: 768px) and (max-width: 781px)
+	.profile_block 
+		.col-xs-12
+			height: 490px
+			
+	.posts_block
+		.col-xs-12		
+			height: 720px
+			
+	.prof-side_content, .post-side_content
+		.wrapp
+			div
+				padding: 0 0 0 125px
+				width: 345px
+				
+	.prof-image_content
+		.wrapp 
+			div
+				width: 140px
+		.height_control
+			height: 339px //temporal
+			
+	.post-image_content		
+		.wrapp 
+			div
+				width: 180px
+		.height_control
+			height: 474px //temporal
+			
+	.prof-centered, .post-centered
+		.wrapp
+			div
+				width: 160px
+				
+/* ***** PORTAFOLIO ****** */
+@media screen and (max-width: 699px)
+	#portfolio_submenu, #post_submenu
+		ul	
+			display: none
+			
+	#submenu-filter	
+		display: inline-block
+		
+@media screen and (max-width: 500px)	
+	
+	#main_content.portafolio, #main_content.portfolio, #main_content.post, #main_content.posts
+		padding: 40px 0 0
+		
+	#portfolio_submenu, #post_submenu
+		height: 40px
+
+		.container
+			padding-top: 10px
+
+		#search_box	
+			top: 7px
+
+@media screen and (max-width: 409px)
+	#portfolio_submenu, #post_submenu
+		p
+			display: none
+	
+	#submenu-filter
+		.select_wrapp		
+			width: 115px
+			
+	#search_box.open		
+		width: 128px		
+		
+	#search_b
+		width: 100px
+		
+/* ***** POSTS ****** */
+
+@media screen and (max-width: 767px)
+	#post-sidemenu_bck
+		display: none
+
+	#post-sidemenu		
+		background: #F9F9F9
+		padding: 40px 0
+
+@media screen and (max-width: 500px)
+	.banner_seccion_interna.posts
+		.layout-left
+			p
+				margin: 0 auto 15px
+				
+			.wrapp
+				.dummy-icon
+					top: 0
+					
+		.layout-center
+			p
+				margin: 0 auto 35px
+				
+/* ***********  CONTACT ****************** */
+@media screen and (max-width: 767px)
+		
+	.two_colors-column
+		.color_decor
+			display: none
+		.container
+			width: 100%
+			
+		.form_area
+			background: #F7F7F7	
+		.wrapp
+			margin-left: auto
+			margin-right: auto
+			width: 95%

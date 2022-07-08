@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html data-ng-app="mint.app">
+
+<head>
+    {% load staticfiles %}
+    <title>Refri-Tec de Tijuana</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="http://mintitmedia.com">
+    <meta name="description" content="Refri-Tec de Tijuana. Aire acondicionado y refrigeracion.">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+    <link href="{% static 'css/vendor.css' %}" rel="stylesheet">
+    <link href="{% static 'css/screen.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header" data-ui-view="header-view"></header>
+    <section id="content" role="main" class="view-frame ngFade" data-ui-view="main-view"></section>
+    <footer data-ui-view="footer-view"></footer>
+    <script type="text/javascript" src="{% static 'js/vendor.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/mint.app.js' %}"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-64118511-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+
+</html>

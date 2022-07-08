@@ -1,0 +1,87 @@
+#priority-phrase
+	background: url(#{$img}services-air-conditioner-xs.jpg) center top no-repeat
+	background-size: cover
+	color: white
+	@extend %f_regular
+	font-size: 31px
+	height: 220px
+	letter-spacing: 0.07em
+	padding: 17px 0
+	text-align: center
+
+	em
+		color: $blue
+		display: block
+		@extend %f_bold
+		font-style: normal
+
+	.wrap
+		display: inline-block
+		margin: 0 -1px 0 0
+		max-width: 97%
+		vertical-align: middle
+		width: 660px
+
+#soluciones
+	h2.small
+		margin-top: 40px	
+
+	.button
+		margin: 40px 0 50px	
+
+#mantenimiento
+	h3
+		margin-top: 50px		
+
+#solutions-instalation, #solutions-mantainance
+	background: url(#{$img}solutions-instalation.jpg) bottom left no-repeat
+	background-size: cover
+	height: 100%
+	width: 50%
+
+#solutions-mantainance
+	background: url(#{$img}solutions-mantainance.jpg) top right no-repeat
+	background-size: cover
+
+.text-img-content
+	position: relative
+	.img
+		
+		height: 100%
+		left: 0
+		position: absolute
+		top: 0
+		width: 100%
+
+
+.text-img-content.right
+	.img
+		left: auto
+		right: 0
+
+#tipo-clientes
+	padding: 100px 0 110px
+
+	h3
+		margin: 0 0 30px
+
+		&:before
+			background: sprite($solutions-icons, residencial)
+			@include sprite-dimensions($solutions-icons, residencial)
+			content: " "
+			display: block
+			margin: 0 auto 55px
+
+	#client-commercial
+		&:before
+			background: sprite($solutions-icons, comercial)
+			@include sprite-dimensions($solutions-icons, comercial)
+
+	#client-industrial
+		&:before
+			background: sprite($solutions-icons, industrial)
+			@include sprite-dimensions($solutions-icons, industrial)
+
+
+	p
+		min-height: 60px

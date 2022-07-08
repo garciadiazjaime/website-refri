@@ -1,0 +1,7 @@
+.git
+.openshift
+.vscode
+bower_components
+docs
+node_modules
+npm-debug.log

@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!-- ************ TWO COLORS INFO  ***************** -->
+<div id="contacto" class="two_colors-column">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 first">
+                <div class="wrapp">
+                    <h2 class="small">Contacto</h2>
+                    <p>En Refritec de Tijuana nuestra prioridad es dar el mejor servicio a nuestros clientes asesorándoles en sus necesidades de refrigeración, para una consulta personalizada, estamos disponibles en:</p>
+                    <ul class="contact-list">
+                        <li class="address">
+                            <address>Prolongación Paseo de los Heroes No. 755
+                                <br /> Col. 20 de Noviembre Tijuana, B.C. México </address>
+                        </li>
+                        <li class="tel"><a href="tel:6646222223">(664) 622-2223</a><a href="tel:6646222243">(664) 622-2243 </a></li>
+                        <li class="email"><a href="mailto:info@refritectijuana.com">info@refritectijuana.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 form_area">
+                <div class="wrapp">
+                    <h3>Contáctanos</h2>
+						<p>Para cualquier duda o comentario por favor complete la siguiente forma de contacto y en breve estaremos en contacto con usted.</p>
+
+						<form id="contact-form" name="contact_form" novalidate="novalidate">
+							<input type="text" name="name" data-ng-model="contact.name" data-ng-required='validate.name.required' data-ng-minlength='validate.name.min' data-ng-maxlength='validate.name.max' maxlength='[[validate.name.max]]' placeholder="Nombre" class="custom_textbox" />
+
+							<input type="email" name="email" data-ng-model="contact.email" data-ng-required='validate.email.required' data-ng-minlength='validate.email.min' data-ng-maxlength='validate.email.max' data-ng-pattern="validate.email.pattern" class="custom_textbox" maxlength='[[validate.email.max]]' placeholder="Correo" class="custom_textbox" />
+
+							<input type="tel" name="tel" data-ng-model="contact.tel"  data-ng-required='[[fieldTel.required]]' data-ng-minlength='[[fieldTel.min]]' data-ng-maxlength='[[fieldTel.max]]' placeholder="Teléfono" class="custom_textbox" />
+
+							<textarea name="message" data-ng-model="contact.message" data-ng-required='validate.message.required' data-ng-minlength='validate.message.min' data-ng-maxlength='validate.message.max' placeholder="Mensaje" class="custom_textarea" maxlength='[[validate.message.max]]' placeholder="Mensaje" class="custom_textarea"></textarea>
+
+							<button type="submit" class="custom_submit button" data-ng-click="sendEmail(contact_form, contact)" data-ng-disabled="messageState.state == 3">Enviar</button>
+
+							<div id="msg" data-ng-show="contact_form.$submitted || messageState.state == 2">
+						        <span data-ng-bind="messageState.msg" data-ng-class="{'error': messageState.state == 3, 'success': messageState.state == 2}"></span>
+								<img data-ng-src="{% static 'img/ajax-loader.gif' %}" alt="loading" data-ng-show="messageState.state == 1">
+						    </div>
+						</form>
+					</div>
+				</div>	
+			</div>	
+			<span class="color_decor"></span>
+		</div>
+	</div>
+<!-- ************ TWO COLORS INFO  - fin ********** -->
+<section id="map">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1682.230329284017!2d-116.9855997!3d32.5138416!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x20d9f71431f46aac!2sRefritec+Loubet+S.A.+de+C.V.!5e0!3m2!1sen!2smx!4v1434384222973" width="100%" height="100%" frameborder="0"></iframe>
+</section>
