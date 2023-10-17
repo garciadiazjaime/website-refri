@@ -32,3 +32,7 @@ def home(request):
 
 # def contact(request):
 # 	return render_to_response('partial/onepage.html')
+
+
+def challenge(request, challenge=""):
+	return HttpResponse(str(challenge) + '.LuQfyuS7LYdoK-grGkjE_j762MMlVb6AoJkx1D3FQvY')

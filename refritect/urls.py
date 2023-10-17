@@ -1,5 +1,8 @@
 from django.conf.urls import patterns, include, url
-from django.contrib import admin
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = patterns('',
     # Examples:
@@ -17,4 +20,10 @@ urlpatterns = patterns('',
     url(r'^partial/section/', include('django_components.front.urls')),
     url(r'^partial/block/', include('django_components.front.urls')),
     # url(r'^admin/', include(admin.site.urls)),
+
+    #### Cert
+    url(r'^.well-known/acme-challenge/(?P<challenge>[^/]+)$', 'django_components.front.views.challenge', name='challenge'),
 )
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

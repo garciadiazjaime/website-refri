@@ -63,6 +63,6 @@ Example about how to document our functions.
  */
 
 docker build -t garciadiazjaime/website-refritect .
-docker run -d -p 49184:3084 garciadiazjaime/website-refritect
+docker run -d -p 49184:8000 garciadiazjaime/website-refritect
 docker push garciadiazjaime/website-refritect
 docker pull garciadiazjaime/website-refritect

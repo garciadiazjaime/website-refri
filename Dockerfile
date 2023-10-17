@@ -8,6 +8,6 @@ ADD . /code
 
 
 
-EXPOSE 3084
+EXPOSE 8000
 
-CMD [ "python", "/code/manage.py", "runserver", "0.0.0.0:3084", "--insecure" ]
+CMD [ "gunicorn", "refritect.wsgi:application", "--bind", "0.0.0.0:8000"]

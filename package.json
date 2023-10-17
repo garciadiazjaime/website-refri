@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "",
   "main": "",
-  "dependencies": {},
   "devDependencies": {
     "bower": "^1.4.1",
     "gulp": "^3.8.11",
@@ -23,7 +22,11 @@
     "run-sequence": "^1.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "b": "docker build -t garciadiazjaime/website-refritect . --platform linux/amd64",
+    "p": "docker push garciadiazjaime/website-refritect",
+    "r": "docker run -d -p 49184:8000 garciadiazjaime/website-refritect",
+    "d": "npm run b && npm run p && echo 'docker pull garciadiazjaime/website-refritect'"
   },
   "author": "jaime@mintitmedia.com",
   "license": "ISC"
